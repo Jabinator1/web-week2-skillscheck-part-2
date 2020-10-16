@@ -10,7 +10,10 @@
 //should return the SECOND callback param invoked.
 
   //Code here
-
+let invokesCallbacks = (num, cb1, cb2) => {
+  return num > 10 ? cb1()
+        : cb2()
+}
 
 //////////////////PROBLEM 2////////////////////
 
@@ -20,12 +23,10 @@
 //of invoking the callback parameter 
 //to the variable greeting, after 1 second.
 
-  var greeting;
+var greeting;
 
-  function timedGreeting(callback){
+function timedGreeting(callback){
+  setTimeout(test = () => greeting = callback(), 1000)
+}
 
-    //Code here
-
-    
-  }
 

@@ -1,10 +1,19 @@
 //////////////////PROBLEM 1////////////////////
 
-// Write a function called stringItOut that takes in an array. Determine if it is an array of numbers or strings and sort it greatest to least accordingly (sort strings alphabetically). Return the array converted into a string using the toString method.
+// Write a function called stringItOut that takes in an array. Determine if it is an array of numbers or strings and sort it greatest to least accordingly (sort strings alphabetically). 
+//Return the array converted into a string using the toString method.
 
 //Code here
 
-
+let stringItOut = arr => {
+  if (arr.every(i => typeof i === "string")) {
+    arr.sort()
+    arr.reverse()
+  } else {
+    arr.sort((a, b) => b - a)
+  }
+  return arr.toString()
+}
 //////////////////PROBLEM 2////////////////////
 
 // Given the functions below: invoke the function math passing in complex, 2, and 3 as parameters. Save the result to a variable called mathResult.
@@ -18,3 +27,4 @@ function complex(num1, num2) {
 }
 
 //Code here
+let mathResult = math(complex, 2, 3)
