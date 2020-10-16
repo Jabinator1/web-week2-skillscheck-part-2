@@ -12,7 +12,9 @@ function addDucks(arr, ind) {
 
   //WRITE YOUR FOR-LOOP HERE
   //For your iterator, declare it with the let keyword, and name it "i"
-  
+ for (item in arr) {
+   arr[item] += "Duck"
+ } 
 
   //DO NOT TOUCH THIS
   return [arr, ind]
@@ -26,7 +28,7 @@ function addDucks(arr, ind) {
 //invocation within the if statement.
 
 if (true) {
-  //CODE HERE
+  let color = "red"
 
 
   //DO NOT TOUCH THIS LINE
@@ -39,7 +41,7 @@ if (true) {
 //Assign it the value of "Hello".
 
 //Code here
-
+const greetingsEarthlings = "Hello"
 
 //////////////////PROBLEM 4////////////////////
 //Create a function called madLib that takes in a
@@ -52,7 +54,7 @@ if (true) {
 //look it up, check out the documentation.
 
 //Code here
-
+const madLib = string => `${string}, my dear Watson.`
 
 //////////////////PROBLEM 5////////////////////
 //Based on the following code, answer the question below:
@@ -68,8 +70,8 @@ var obj = { a: "a", b: "b", c: "c" }
 //comment out the arrays below which list the correctly
 //used spread operators.
 
-// var answers = ["Example A", "Example B", "Example C", "Example D"]
-// var answers = ["Example B", "Example C", "Example D"]
+var answers = ["Example A", "Example B", "Example C", "Example D"]
+var answers = ["Example B", "Example C", "Example D"]
 // var answers = ["Example A", "Example B"]
 // var answers = ["Example C", "Example D"]
 
@@ -80,7 +82,10 @@ var obj = { a: "a", b: "b", c: "c" }
 //string without spaces.
 
 //Code here
-
+const cleanUp = string => {
+  let test = string.split(" ").join("")
+  return test
+}
 
 //////////////////PROBLEM 7////////////////////
 //Finish the function below. Assume that the
@@ -90,8 +95,8 @@ var obj = { a: "a", b: "b", c: "c" }
 
 function whatOcean(obj) {
 
-  //Code here
-  
+  let { ocean } = obj
+  return ocean
 }
 
 //////////////////PROBLEM 8////////////////////
@@ -105,3 +110,4 @@ function whatOcean(obj) {
 //"spaghetti & liver with onions"
 
 
+const leftovers = (string, ...restParam) => `${string} & ${restParam[restParam.length - 1]}`
