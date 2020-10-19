@@ -45,7 +45,7 @@ describe('es6', function () {
 
 	describe('Problem 3 - greetingsEarthlings, declared with "const"', function () {
 		it('should be correct', function () {
-			expect(function() { greetingsEarthlings += "Hey" }).toThrow(new TypeError("Assignment to constant variable."));
+			expect(function() { greetingsEarthlings += "Hey" }).toThrow(new TypeError("Attempted to assign to readonly property."));
 		})
 	})
 

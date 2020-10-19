@@ -10,8 +10,8 @@
 //but a function expression saved to the variable key.
 
 //Code here
-function keyword() {
-  const key = function() {
+const keyword = () => {
+  var key = function() {
     return "word"
   }
   return key
